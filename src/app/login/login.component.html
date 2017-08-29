@@ -1,3 +1,37 @@
-<p>
-  login works!
-</p>
+
+<div class="col-md-12 col-lg-12">
+	<h2>Please Sign In!</h2>
+	<hr>
+	<form novalidate autocomplete="off" #loginForm="ngForm" (ngSubmit)="getLogin(loginForm.value)">
+		<div class="form-group">
+			<!-- 
+			<input id="zipcode" (ngModel)="zipcode" name="zipcode" class="form-control" placeholder="zipcode" required />
+			<em *ngIf="loginForm.controls.zipcode?.invalid && loginForm.controls.zipcode?.touched">Required</em>
+		</div>
+		<div class="form-group">
+			
+			<input id="zipcode" (ngModel)="zipcode" name="zipcode" class="form-control" placeholder="zipcode" required />
+			<em *ngIf="loginForm.controls.zipcode?.invalid && loginForm.controls.zipcode?.touched">Required</em>
+		</div>
+		<button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">Continue</button> -->
+
+			<md-input-container class="input-width">
+			    <input mdInput placeholder="Username" name="username" [(ngModel)]="username" required>
+			    <md-error *ngIf="loginForm.controls.username">
+		          This field is required
+		        </md-error>
+			</md-input-container>
+		</div>
+		<div class="form-group">
+			<md-input-container class="input-width">
+			    <input mdInput placeholder="Password" name="password" type="password" [(ngModel)]="password" required>
+			    <md-error *ngIf="loginForm.controls.password">
+		          This field is required
+		        </md-error>
+			</md-input-container>
+		</div>
+		<div class="form-group">
+			<button md-raised-button type="submit" [disabled]="loginForm.invalid">Login</button>
+		</div>
+	</form>
+</div>

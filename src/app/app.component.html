@@ -1,18 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-    <div>
-     <a routerLink="/app-login">
-       Login
-     </a>
-    </div>
-    <div>
-      <a routerLink="/app-organic-tracker-sheet">
-        About
-      </a>
-    </div>
-  </h1>
-</div>
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="jumbotron" style="text-align:center">
+    <h2>
+      Welcome to {{title}}!
+    </h2>
+    <hr>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="javascript:void(0)" routerLink="/organic-tracker-sheet" role="button">Organic Track Sheet</a>
+      <a class="btn btn-primary btn-lg" href="javascript:void(0)" routerLink="/login" role="button">Login</a>
+    </p>
+  </div>
+ 
 
+  <router-outlet></router-outlet>
+</div>
